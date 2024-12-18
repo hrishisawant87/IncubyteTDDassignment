@@ -38,8 +38,8 @@ public void ArraySplitDelimiterSeparatedString() {
     }
     @Test
     public void ArraySplitNegativeNumbersSepratedString(){
-        String number = "-1,-2,-3,-4,-5";
-        Assertions.assertEquals(NumberFormatException.class,addition.add(number));
+        String number = "1,-2,3,-4,-5";
+        Assertions.assertThrows(NumberFormatException.class , () -> addition.add(number));
     }
 }
 
